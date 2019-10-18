@@ -38,6 +38,11 @@ namespace CrudAsyncXamarin.Data
             return _database.InsertAsync(usuario);
         }
 
+        public Task<int> EditarUsuarioAsync(Usuario usuario)
+        {
+            return _database.UpdateAsync(usuario);
+        }
+
         // Metodo Excluir Usuário
         public Task<int> ExcluirUsuarioAsync(Usuario usuario)
         {

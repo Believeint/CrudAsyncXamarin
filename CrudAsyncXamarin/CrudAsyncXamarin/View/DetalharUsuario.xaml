@@ -6,9 +6,10 @@
              mc:Ignorable="d"
              x:Class="CrudAsyncXamarin.View.DetalharUsuario">
     <ContentPage.Content>
-        <TableView>
+        <TableView HasUnevenRows="True">
             <TableRoot>
                 <TableSection>
+                    <TextCell Text="Id" Detail="{Binding Id}"/>
                     <TextCell Text="Nome" Detail="{Binding Nome}"/>
                     <TextCell Text="Data de Nascimento" Detail="{Binding DataNascimento}"/>
                     <TextCell Text="Sexo" Detail="{Binding Sexo}"/>
@@ -16,7 +17,17 @@
                     <TextCell Text="Cidade" Detail="{Binding Cidade}"/>
                     <TextCell Text="Estado" Detail="{Binding Estado}"/>
                     <TextCell Text="País" Detail="{Binding Pais}"/>
-                   
+                    <TextCell Text="Data de Cadastro" Detail="{Binding DataCadastro}"/>
+                    <ViewCell>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text="Editar Usuario" Clicked="EditarUsuario" TextColor="White" BackgroundColor="DodgerBlue"/>
+                            <Button Text="Excluir Usuario" Clicked="ExcluirUsuario" TextColor="White" Grid.Column="1" BackgroundColor="Red"/>
+                        </Grid>
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>

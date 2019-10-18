@@ -6,6 +6,7 @@ namespace CrudAsyncXamarin.Model
 {
     public class Usuario
     {
+
         #region "Propriedades"
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

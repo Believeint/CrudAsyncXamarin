@@ -4,24 +4,24 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CrudAsyncXamarin.View.AdicionarUsuario">
+             x:Class="CrudAsyncXamarin.View.EditarUsuario">
     <ContentPage.Content>
         <TableView HasUnevenRows="True">
             <TableRoot>
                 <TableSection>
-                    <EntryCell x:Name="entNome" Label="Nome"/>
-                    <EntryCell x:Name="entDtNasc" Label="Data de Nascimento"/>
-                    <EntryCell x:Name="entSexo" Label="Sexo"/>
-                    <EntryCell x:Name="entEmail" Label="Email"/>
-                    <EntryCell x:Name="entCidade" Label="Cidade"/>
-                    <EntryCell x:Name="entEstado" Label="Estado"/>
-                    <EntryCell x:Name="entPais" Label="País"/>
+                    <EntryCell x:Name="entNome" Label="Nome" Text="{Binding Nome}"/>
+                    <EntryCell x:Name="entDtNasc" Label="Data de Nascimento" Text="{Binding DataNascimento}"/>
+                    <EntryCell x:Name="entSexo" Label="Sexo" Text="{Binding Sexo}"/>
+                    <EntryCell x:Name="entEmail" Label="Email" Text="{Binding Email}"/>
+                    <EntryCell x:Name="entCidade" Label="Cidade" Text="{Binding Cidade}"/>
+                    <EntryCell x:Name="entEstado" Label="Estado" Text="{Binding Estado}"/>
+                    <EntryCell x:Name="entPais" Label="País" Text="{Binding Pais}"/>
                     <ViewCell>
                         <Grid Margin="10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Button Text="Adicionar Novo" Clicked="AddNovoUsuario" TextColor="White" BackgroundColor="Green"/>
+                            <Button Text="Atualizar" Clicked="AtualizarUsuario" BackgroundColor="DodgerBlue" TextColor="White"/>
                         </Grid>
                     </ViewCell>
                 </TableSection>
