@@ -17,18 +17,20 @@ namespace CrudAsyncXamarin.View
             InitializeComponent();
         }
 
-        private void AddNovoUsuario(object sender, EventArgs e)
+        private async void AddNovoUsuario(object sender, EventArgs e)
         {
             var usuario = (Usuario)BindingContext;
             usuario.Nome = entNome.Text;
             usuario.DataNascimento = Convert.ToDateTime(entDtNasc.Text);
+            usuario.Sexo = entSexo.Text;
             usuario.Email = entEmail.Text;
             usuario.Cidade = entCidade.Text;
             usuario.Estado = entEstado.Text;
             usuario.Pais = entPais.Text;
             usuario.DataCadastro = DateTime.UtcNow;
-            App.Database.IncluirUsuarioAsync(usuario);
 
+            await App.Database.IncluirUsuarioAsync(usuario);
+            await Navigation.PopAsync();
         }
     }
 }

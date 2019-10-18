@@ -22,6 +22,7 @@ namespace CrudAsyncXamarin.View
             base.OnAppearing();
             var usuarios = new List<Usuario>();
             usuarios = await App.Database.GetUsuarios();
+            lvwUsuario.ItemsSource = usuarios;
         }
 
         private async void AddUsuarioClicked(object sender, EventArgs e)
@@ -33,7 +34,7 @@ namespace CrudAsyncXamarin.View
         {
             if(e.Item != null)
             {
-                await Navigation.PushAsync(new DetalharUsuario());
+                await Navigation.PushAsync(new DetalharUsuario() { BindingContext = e.Item as Usuario });
             }
         }
     }

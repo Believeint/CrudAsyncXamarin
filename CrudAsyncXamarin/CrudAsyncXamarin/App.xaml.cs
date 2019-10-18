@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CrudAsyncXamarin.Data;
 using System.IO;
+using CrudAsyncXamarin.View;
 
 namespace CrudAsyncXamarin
 {
@@ -24,7 +25,7 @@ namespace CrudAsyncXamarin
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new ListarUsuario());
         }
 
         protected override void OnStart()

@@ -6,10 +6,19 @@
              mc:Ignorable="d"
              x:Class="CrudAsyncXamarin.View.DetalharUsuario">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <TableView>
+            <TableRoot>
+                <TableSection>
+                    <TextCell Text="Nome" Detail="{Binding Nome}"/>
+                    <TextCell Text="Data de Nascimento" Detail="{Binding DataNascimento}"/>
+                    <TextCell Text="Sexo" Detail="{Binding Sexo}"/>
+                    <TextCell Text="Email" Detail="{Binding Email}"/>
+                    <TextCell Text="Cidade" Detail="{Binding Cidade}"/>
+                    <TextCell Text="Estado" Detail="{Binding Estado}"/>
+                    <TextCell Text="País" Detail="{Binding Pais}"/>
+                   
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>
